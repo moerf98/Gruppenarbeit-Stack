@@ -43,3 +43,44 @@ Die Abgabe auf GitHub muss im **Markdown-Format** erfolgen, präsentieren werden
 **Warum wichtig?**
 - Effiziente Datenstrukturen = schnellere Programme  
 - Grundlage für viele **Algorithmen** und Anwendungen  
+
+## Themenaufteilung
+
+Damit jede Person ungefähr gleich viel Aufwand und Redezeit hat, teilen wir die Inhalte wie folgt auf:
+
+### Manuel Näf
+1. Einführung  
+   - Was ist eine Datenstruktur?  
+   - Warum sind Datenstrukturen wichtig?  
+2. Definition & Prinzip  
+   - Was ist ein Stack?  
+   - LIFO-Prinzip (Last In – First Out)  
+3. Aufbau & Funktionsweise  
+   - Elemente stapeln  
+   - Zugriff nur auf oberstes Element
+
+---
+
+### Person B
+4. Grafische Darstellung  
+   - Skizze / Visualisierung von Push & Pop  
+5. Operationen im Detail  
+   - Push (hinzufügen)  
+   - Pop (entfernen)  
+   - Peek (oberstes Element ansehen)  
+6. Vor- und Nachteile  
+   - Vorteile (einfach, effizient)  
+   - Nachteile (nur Zugriff auf Top)  
+
+---
+
+### Person C
+7. Einsatzbereiche  
+   - Undo-Funktion  
+   - Funktionsaufruf-Stack  
+   - Ausdrucksauswertung (z. B. Klammern)  
+8. Implementierung in C  
+   - Einfacher Beispielcode für Push/Pop  
+   - Erklärung des Codes  
+9. Quiz  
+   - 5 Fragen zur Wiederholung  
