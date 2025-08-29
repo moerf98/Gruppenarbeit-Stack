@@ -24,10 +24,12 @@ _Gruppenarbeit – Programmiertechnik B_
 
 ---
 
-3. **Sven Faas**  
+3. **Manuel Näf**  
    - Vor- und Nachteile  
    - Einsatzbereiche  
-   - Implementierung in C  
+   - Implementierung in C
+
+4. **Cristian Cubas**
    - Quiz  
 
 ---
@@ -117,18 +119,18 @@ denn dort passieren alle Operationen.
 ---
 
 ## Grafische Skizze  
-```
-Stack (Array):
 
+Stack (Array):
+```
 Index:   0   1   2   3   4
 Werte:  [H][A][L][L][O]
-                  ↑ Top
+                     ↑ Top
 
 
 Stack (Linked List):
 
 Top → [O] → [L] → [L] → [A] → [H] → NULL
-
+```
 ---
 
 ## Operation: Push  
@@ -140,16 +142,16 @@ void push(int value) {
         stack[++top] = value;
     }
 }
-```
+
 
 Push: Legt ein neues Element oben auf den Stack.
 Push('O') bei [H][A][L][L] → wird [H][A][L][L][O]
 Wenn voll → Overflow-Fehler
-
+```
 ---
 
 ## Operation: Pop  
-
+```
 int pop() {
     if (top == -1) {
         printf("Stack Underflow!\n");
@@ -157,7 +159,7 @@ int pop() {
     }
     return stack[top--];
 }
-
+```
 
 Pop: Entfernt das oberste Element.
 Pop() bei [H][A][L][L][O] → ergibt [H][A][L][L]
@@ -166,7 +168,7 @@ Wenn leer → Underflow-Fehler
 ---
 
 ## Operation: Peek  
-
+```
 int peek() {
     if (top == -1) {
         printf("Stack ist leer!\n");
@@ -174,7 +176,7 @@ int peek() {
     }
     return stack[top];
 }
-
+```
 
 Peek: Zeigt das oberste Element ohne es zu löschen.
 z. B. für Undo-Vorschau: Zeige, was als Nächstes rückgängig gemacht wird
@@ -191,18 +193,18 @@ z. B. für Undo-Vorschau: Zeige, was als Nächstes rückgängig gemacht wird
 
 ---
 
-# Teil 3 – Sven Faas  
+# Teil 3 – Manuel Näf  
 
 ---
 # Vor- und Nachteile
 
-**Vorteile (Pro):**
+**Vorteile:**
 - Einfach zu verstehen und zu implementieren  
 - Sehr effizient für Push/Pop-Operationen (O(1))  
 - Gut geeignet für „Undo“-Funktionen oder Rückverfolgungen  
 - Klare Struktur: immer nur Zugriff auf das oberste Element  
 
-**Nachteile (Contra):**
+**Nachteile:**
 - Kein direkter Zugriff auf beliebige Elemente  
 - Kann bei Arrays Speicher verschwenden (Overflow)  
 - Bei Listen zusätzlicher Speicherbedarf für Zeiger  
@@ -286,12 +288,12 @@ int main() {
     peek();      // zeigt 10
     return 0;
 }
-
+```
 ---
-
+# Teil 4 – Cristian Cubas
 ## Quiz  
 
-*(Platz für 4–5 Fragen)*  
+  
 
 ---
 
