@@ -11,15 +11,16 @@ Elektrotechniker HF – Programmiertechnik B
 ---
 
 # Agenda
-1. Einführung  
-2. Definition & Prinzip  
-3. Aufbau & Funktionsweise  
-4. Grafische Darstellung  
-5. Operationen  
-6. Vor- und Nachteile  
-7. Einsatzbereiche  
-8. Implementierung in C  
-9. Quiz  
+1. Einführung
+2. Eine kurze Voranmerkung
+3. Definition & Prinzip  
+4. Aufbau & Funktionsweise  
+5. Grafische Darstellung  
+6. Operationen  
+7. Vor- und Nachteile  
+8. Einsatzbereiche  
+9. Implementierung in C  
+10. Quiz  
 
 ---
 
