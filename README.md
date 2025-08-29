@@ -30,6 +30,13 @@ Die Abgabe auf GitHub muss im **Markdown-Format** erfolgen, präsentieren werden
 - Mehrzeiliger Codeblock: drei Backticks vor und nach dem C-Code  
 - Folientrenner in Marp: `---`  
 
+## Presenter Notes in Marp
+
+In Marp können zu jeder Folie **Sprechernotizen** hinzugefügt werden.  
+Diese werden **nicht** auf der Folie angezeigt, sondern nur im Präsentationsmodus oder nach Export z. B. nach **PowerPoint** im Notizenbereich sichtbar.
+
+Die Notizen schreibt man in **HTML-Kommentare** direkt unter die Folieninhalte:
+
 **Beispiel-Folie Einführung:**
 
 ```markdown
@@ -43,6 +50,12 @@ Die Abgabe auf GitHub muss im **Markdown-Format** erfolgen, präsentieren werden
 **Warum wichtig?**
 - Effiziente Datenstrukturen = schnellere Programme  
 - Grundlage für viele **Algorithmen** und Anwendungen  
+
+<!-- presenter notes
+Hier stehen die Notizen für die Vortragenden.
+Diese erscheinen nicht auf der Folie selbst,
+sondern nur im Notizenmodus oder in PowerPoint.
+-->
 
 ## Themenaufteilung
 
