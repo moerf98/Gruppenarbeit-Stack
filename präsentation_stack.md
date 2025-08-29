@@ -1,94 +1,175 @@
 ---
 marp: true
-theme: default
 paginate: true
+theme: default
+class: lead
 ---
 
-# Stack in C
-Gruppenarbeit Datenstrukturen  
-Elektrotechniker HF – Programmiertechnik B
-
----
-
-# Agenda
-1. Einführung
-2. Eine kurze Voranmerkung
-3. Definition & Prinzip  
-4. Aufbau & Funktionsweise  
-5. Grafische Darstellung  
-6. Operationen  
-7. Vor- und Nachteile  
-8. Einsatzbereiche  
-9. Implementierung in C  
-10. Quiz  
+# Präsentation: Stack in C  
+_Gruppenarbeit – Programmiertechnik B_
 
 ---
 
-# Einführung
-- Was ist eine Datenstruktur?  
-- Warum sind Datenstrukturen wichtig?  
+# Agenda  
+
+1. **Manuel Näf**  
+   - Einführung: Definition, Aufbau, Funktionsweise  
+   - Beispiele & Alltagsvergleiche  
+   - Übergang zu den Operationen  
+
+2. **Cristian Cubas**  
+   - Grafische Darstellung des Aufbaus  
+   - Erklärung der Operationen (Push, Pop, Peek)  
+   - Visuelle Beispiele  
+
+3. **Sven Faas**  
+   - Vor- und Nachteile  
+   - Einsatzbereiche  
+   - Implementierung in C  
+   - Quiz  
 
 ---
 
-# Definition & Prinzip
-- Stack = Stapel  
-- LIFO-Prinzip („Last In – First Out“)  
+# Teil 1 – Manuel Näf  
 
 ---
 
-# Aufbau & Funktionsweise
-- Elemente werden übereinandergelegt  
-- Zugriff nur auf oberstes Element  
+# Stack – Einführung  
+
+<!-- presenter notes
+Hallo zusammen, ich beginne mit der Einführung in die Datenstruktur Stack. 
+Bevor wir uns die Operationen anschauen, möchte ich die Grundidee, den Aufbau 
+und Alltagsbeispiele erklären. Das ist die Basis für die nächsten Teile.
+-->
 
 ---
 
-# Grafische Darstellung
-*(Hier kommt eine Skizze oder Grafik hin)*  
+## Definition: Stack  
+
+- **Stack** (dt. *Stapel*) ist eine abstrakte Datenstruktur  
+- Prinzip: **LIFO** = *Last In, First Out*  
+- Vergleich: **Tellerstapel**  
+  - Letzter Teller oben → erster Teller wieder weg  
+
+<!-- presenter notes
+Ein Stack – auf Deutsch Stapel – ist eine abstrakte Datenstruktur. 
+Das zentrale Prinzip ist LIFO – Last In, First Out. 
+Das heißt, das letzte Element, das hineingelegt wird, 
+ist auch das erste, das wieder hinauskommt. 
+Wie bei einem Tellerstapel: ich lege Teller oben ab, 
+und nehme beim Abheben wieder den obersten.
+-->
 
 ---
 
-# Operationen
-**Push** – Element oben ablegen  
-**Pop** – oberstes Element entfernen  
-**Peek** – oberstes Element ansehen  
+## Prinzip LIFO  
+
+- **Letztes hinein → erstes hinaus**  
+
+Beispiel:  
+1. Karten A, B, C werden gestapelt  
+2. Reihenfolge: `[A, B, C]`  
+3. Erste Entnahme = **C**  
+
+<!-- presenter notes
+Ein Beispiel: Ich lege die Karten A, B und C auf den Stapel. 
+C liegt oben, A ganz unten. 
+Wenn ich jetzt ein Element herausnehme, bekomme ich nicht A, 
+sondern C – also das letzte, das ich hineingelegt habe.
+-->
 
 ---
 
-# Vor- und Nachteile
-**Vorteile:**  
-- Einfach, effizient  
-- Gute Speicherverwaltung  
+## Aufbau & Funktionsweise  
 
-**Nachteile:**  
-- Zugriff nur auf oberstes Element  
+- Zwei typische Implementierungen:  
+  - **Array-basiert** → feste Größe  
+  - **Verkettete Liste** → flexibel, dynamisch  
+
+- Wichtige Bestandteile:  
+  - **Speicherbereich** (Array/Liste)  
+  - **`top`-Zeiger** → zeigt auf oberstes Element  
+
+<!-- presenter notes
+Es gibt zwei klassische Implementierungen: 
+Array-basiert – das ist schnell, aber hat eine feste Größe. 
+Oder mit einer verketteten Liste – das ist flexibel, kann aber 
+etwas mehr Speicher brauchen. 
+Wichtig ist immer der Zeiger auf das oberste Element – top – 
+denn dort passieren alle Operationen.
+-->
 
 ---
 
-# Einsatzbereiche
-- Undo-Funktionen  
-- Funktionsaufruf-Stack  
-- Ausdrucksauswertung (z. B. Klammernprüfung)  
+## Beispiele aus dem Alltag  
+
+- **Tellerstapel**  
+- **Browser-History**  
+- **Undo-Funktion**  
+- **Wäschekorb**  
 
 ---
 
-# Implementierung in C
-```c
-#include <stdio.h>
-#define SIZE 5
+# Teil 2 – Cristian Cubas  
 
-int stack[SIZE], top = -1;
+---
 
-void push(int value) {
-    if(top == SIZE - 1)
-        printf("Stack Overflow\n");
-    else
-        stack[++top] = value;
-}
+## Grafische Skizze  
 
-int pop() {
-    if(top == -1) {
-        printf("Stack Underflow\n");
-        return -1;
-    }
-    return stack[top--];
-}
+*(Platz für Stack-Illustration)*  
+
+---
+
+## Operation: Push  
+
+*(Platz für Erklärung + Visualisierung)*  
+
+---
+
+## Operation: Pop  
+
+*(Platz für Erklärung + Visualisierung)*  
+
+---
+
+## Operation: Peek  
+
+*(Platz für Erklärung + Visualisierung)*  
+
+---
+
+## Zusammenfassung Operationen  
+
+*(Platz für kurze Wiederholung)*  
+
+---
+
+# Teil 3 – Sven Faas  
+
+---
+
+## Vor- und Nachteile  
+
+*(Platz für Aufzählung Pro/Contra)*  
+
+---
+
+## Einsatzbereiche  
+
+*(Platz für 2–3 Programmierbeispiele)*  
+
+---
+
+## Implementierung in C  
+
+*(Platz für Codebeispiel Push/Pop)*  
+
+---
+
+## Quiz  
+
+*(Platz für 4–5 Fragen)*  
+
+---
+
+# Vielen Dank für die Aufmerksamkeit! 🎉
