@@ -149,6 +149,9 @@ Push('O') bei [H][A][L][L] → wird [H][A][L][L][O]
 Wenn voll → Overflow-Fehler
 ```
 ---
+![Stack Illustration](stack_pop.png)
+
+---
 
 ## Operation: Pop  
 ```
