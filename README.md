@@ -2,32 +2,35 @@
 
 Dieses Repository enthält unsere Präsentation zum Thema **Stack in C** (Programmiertechnik B, HF).
 
-Wir erstellen die Präsentation im **Markdown-Format** (`presentation.md`) und wandeln sie mit **Marp** in Folien (PowerPoint/PDF) um.
+Die Präsentation schreiben wir im **Markdown-Format** in der Datei `präsentation_stack.md`.  
+Am Ende exportieren wir diese Datei mit **Marp** zu Folien (PowerPoint oder PDF).
 
 ---
 
-## 🔧 Zusammenarbeit
+## Zusammenarbeit
 
-- Alle Inhalte kommen in `presentation.md`.
-- Am Ende exportieren wir die Folien mit **Marp**:
-  1. [Visual Studio Code](https://code.visualstudio.com/) installieren  
-  2. [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) installieren  
-  3. `presentation.md` öffnen → "Export Slide Deck" → `PowerPoint (.pptx)` oder PDF  
-- Die Abgabe auf GitHub muss im **Markdown-Format** erfolgen, die Präsentation halten wir mit den exportierten Folien.
+- Alle Inhalte kommen in `präsentation_stack.md`.  
+- Export mit Marp:  
+  1. Visual Studio Code installieren  
+  2. Erweiterung **Marp for VS Code** installieren  
+  3. `präsentation_stack.md` öffnen → „Export Slide Deck“ → **PowerPoint (.pptx)** oder **PDF**  
+
+Die Abgabe auf GitHub muss im **Markdown-Format** erfolgen, präsentieren werden wir mit den exportierten Folien.
 
 ---
 
-## 💡 Kurze Markdown-Erklärung
+## Markdown-Grundlagen
 
-- `#` = Überschrift  
-- `-` = Liste  
-- `` `Code` `` = Code inline  
-- ```` ```c ... ``` ```` = C-Codeblock  
-- `---` = Trennt Folien in Marp  
+- *kursiv* → `*kursiv*`  
+- **fett** → `**fett**`  
+- ***fett & kursiv*** → `***fett***`  
+- Überschriften: `#` (Titel 1), `##` (Titel 2), `###` (Titel 3)  
+- Listen: `-` für Aufzählung, `1.` für nummerierte Liste  
+- Inline-Code: `printf` → mit Backticks  
+- Mehrzeiliger Codeblock: drei Backticks vor und nach dem C-Code  
+- Folientrenner in Marp: `---`  
 
-### Beispiel: Einführung (fertige Folie)
-
-So könnte die **erste Folie** unserer Präsentation aussehen:
+**Beispiel-Folie Einführung:**
 
 ```markdown
 ---
