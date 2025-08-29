@@ -162,7 +162,6 @@ denn dort passieren alle Operationen.
 
 ## Implementierung in C  
 
-https://stunning-space-dollop-x5xg9w99pxgxc67g.github.dev/ 
 *(Platz für Codebeispiel Push/Pop)*  
 
 ---
