@@ -64,7 +64,7 @@ Aufwand: eher theoretisch, leicht zu erarbeiten, wichtig für Verständnis
 
 ---
 
-### cristian Cubas
+### Cristian Cubas
 - **Grafische Skizzierung des Aufbaus**
   - Darstellung der Struktur mit Zeichnungen (Stapel, Push/Pop-Skizze)  
 - **Erläuterung der wichtigsten Operationen**
