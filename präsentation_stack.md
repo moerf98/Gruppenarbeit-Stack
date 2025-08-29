@@ -292,6 +292,28 @@ int main() {
     return 0;
 }
 ```
+<!-- presenter notes
+Hier zeige ich eine kleine Implementierung eines Stacks in C.
+
+Zuerst erkläre ich, dass wir ein Array der Größe MAX anlegen 
+und eine Variable `top`, die die Position des obersten Elements speichert. 
+Wenn `top` -1 ist, bedeutet das: der Stack ist leer.
+
+Dann bespreche ich die drei Funktionen:
+- `push()`: legt ein neues Element oben auf den Stack. 
+  Falls der Stack voll ist, gibt es eine Overflow-Meldung.
+- `pop()`: entfernt das oberste Element. 
+  Falls der Stack leer ist, gibt es eine Underflow-Meldung.
+- `peek()`: zeigt das oberste Element an, ohne es zu entfernen.
+
+Im `main()`-Programm zeige ich kurz, wie man die Funktionen benutzt: 
+Ich lege Werte auf den Stack, schaue mit `peek()` nach oben, 
+und entferne Elemente mit `pop()`.
+
+So haben wir ein komplettes, lauffähiges Beispiel, 
+das alle Grundoperationen des Stacks demonstriert.
+-->
+
 ---
 # Teil 4 – Cristian Cubas
 ## Quiz  
