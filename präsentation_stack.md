@@ -22,6 +22,8 @@ _Gruppenarbeit – Programmiertechnik B_
    - Erklärung der Operationen (Push, Pop, Peek)  
    - Visuelle Beispiele  
 
+---
+
 3. **Sven Faas**  
    - Vor- und Nachteile  
    - Einsatzbereiche  
@@ -115,54 +117,175 @@ denn dort passieren alle Operationen.
 ---
 
 ## Grafische Skizze  
+```
+Stack (Array):
 
-*(Platz für Stack-Illustration)*  
+Index:   0   1   2   3   4
+Werte:  [H][A][L][L][O]
+                  ↑ Top
+
+
+Stack (Linked List):
+
+Top → [O] → [L] → [L] → [A] → [H] → NULL
 
 ---
 
 ## Operation: Push  
+```
+void push(int value) {
+    if (top == SIZE - 1) {
+        printf("Stack Overflow!\n");
+    } else {
+        stack[++top] = value;
+    }
+}
+```
 
-*(Platz für Erklärung + Visualisierung)*  
+Push: Legt ein neues Element oben auf den Stack.
+Push('O') bei [H][A][L][L] → wird [H][A][L][L][O]
+Wenn voll → Overflow-Fehler
 
 ---
 
 ## Operation: Pop  
 
-*(Platz für Erklärung + Visualisierung)*  
+int pop() {
+    if (top == -1) {
+        printf("Stack Underflow!\n");
+        return -1;
+    }
+    return stack[top--];
+}
+
+
+Pop: Entfernt das oberste Element.
+Pop() bei [H][A][L][L][O] → ergibt [H][A][L][L]
+Wenn leer → Underflow-Fehler
 
 ---
 
 ## Operation: Peek  
 
-*(Platz für Erklärung + Visualisierung)*  
+int peek() {
+    if (top == -1) {
+        printf("Stack ist leer!\n");
+        return -1;
+    }
+    return stack[top];
+}
+
+
+Peek: Zeigt das oberste Element ohne es zu löschen.
+z. B. für Undo-Vorschau: Zeige, was als Nächstes rückgängig gemacht wird
 
 ---
 
-## Zusammenfassung Operationen  
+## Zusammenfassung Operationen
 
-*(Platz für kurze Wiederholung)*  
+| Operation | Beschreibung             | Verändert Stack |
+|-----------|--------------------------|------------------|
+| push()  | Fügt oben ein             | ✅ Ja           |
+| pop()   | Entfernt oberstes Element | ✅ Ja           |
+| peek()  | Zeigt oberstes Element    | ❌ Nein         |
 
 ---
 
 # Teil 3 – Sven Faas  
 
 ---
+# Vor- und Nachteile
 
-## Vor- und Nachteile  
+**Vorteile (Pro):**
+- Einfach zu verstehen und zu implementieren  
+- Sehr effizient für Push/Pop-Operationen (O(1))  
+- Gut geeignet für „Undo“-Funktionen oder Rückverfolgungen  
+- Klare Struktur: immer nur Zugriff auf das oberste Element  
 
-*(Platz für Aufzählung Pro/Contra)*  
+**Nachteile (Contra):**
+- Kein direkter Zugriff auf beliebige Elemente  
+- Kann bei Arrays Speicher verschwenden (Overflow)  
+- Bei Listen zusätzlicher Speicherbedarf für Zeiger  
+- Nicht flexibel für alle Problemstellungen  
+
+<!-- presenter: 
+Hier erkläre ich die Stärken und Schwächen des Stacks.
+Zuerst die Vorteile: Er ist sehr einfach und effizient, besonders bei Push und Pop – diese laufen immer in konstanter Zeit.
+Auch Undo-Funktionen lassen sich damit gut abbilden.
+Dann die Nachteile: Man hat keinen direkten Zugriff auf Elemente in der Mitte.
+Bei Arrays stößt man irgendwann an die feste Größe, das nennt man Stack Overflow.
+Bei Listen braucht man mehr Speicher wegen der Zeiger.
+Damit zeige ich, dass der Stack nicht für alle Probleme passt, aber in den richtigen Fällen sehr gut ist.
+-->
 
 ---
 
-## Einsatzbereiche  
+# Einsatzbereiche
 
-*(Platz für 2–3 Programmierbeispiele)*  
+- **Undo-Funktion in Texteditoren**  
+  Jeder Bearbeitungsschritt wird als Aktion auf den Stack gelegt. „Rückgängig“ = Pop.  
+
+- **Funktionsaufruf-Stack (Call Stack)**  
+  Bei jedem Funktionsaufruf wird ein neuer Eintrag auf den Stack gelegt. Nach Beendigung Pop → Rücksprung in die vorige Funktion.  
+
+- **Klammernprüfung in Ausdrücken**  
+  Beim Einlesen von `(` wird ein Element gepusht, bei `)` wieder gepoppt. Am Ende muss der Stack leer sein → Ausdruck ist korrekt geklammert.  
+
+<!-- presenter:
+Hier gebe ich drei typische Anwendungen. 
+Erstens: Undo in Texteditoren – jede Aktion kommt auf den Stack, Rückgängig heißt: Pop.
+Zweitens: Call Stack – jedes Mal, wenn eine Funktion aufgerufen wird, landet sie oben, und beim Beenden geht es zurück.
+Drittens: Klammernprüfung in Ausdrücken. Jeder öffnende Klammer erzeugt ein Push, jeder schließende ein Pop.
+Das sind praxisnahe Beispiele, die jeder sofort versteht.
+-->
 
 ---
 
-## Implementierung in C  
+# Implementierung in C
 
-*(Platz für Codebeispiel Push/Pop)*  
+```c
+#include <stdio.h>
+#define MAX 5   // maximale Größe des Stacks
+
+int stack[MAX];
+int top = -1;  // zeigt auf das oberste Element
+
+// Push-Funktion: Element hinzufügen
+void push(int value) {
+    if (top == MAX - 1) {
+        printf("Stack Overflow!\n");
+    } else {
+        stack[++top] = value;
+        printf("%d wurde auf den Stack gelegt.\n", value);
+    }
+}
+
+// Pop-Funktion: oberstes Element entfernen
+void pop() {
+    if (top == -1) {
+        printf("Stack Underflow!\n");
+    } else {
+        printf("%d wurde vom Stack entfernt.\n", stack[top--]);
+    }
+}
+
+// Peek-Funktion: oberstes Element ansehen
+void peek() {
+    if (top == -1) {
+        printf("Stack ist leer.\n");
+    } else {
+        printf("Oberstes Element: %d\n", stack[top]);
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    peek();      // zeigt 20
+    pop();       // entfernt 20
+    peek();      // zeigt 10
+    return 0;
+}
 
 ---
 
