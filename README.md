@@ -48,39 +48,47 @@ Die Abgabe auf GitHub muss im **Markdown-Format** erfolgen, präsentieren werden
 
 Damit jede Person ungefähr gleich viel Aufwand und Redezeit hat, teilen wir die Inhalte wie folgt auf:
 
+## Themenaufteilung
+
+Damit jede Person ungefähr gleich viel Redezeit (6–8 Minuten) und Vorbereitungsaufwand hat, teilen wir die Präsentation so auf:
+
 ### Manuel Näf
-1. Einführung  
-   - Was ist eine Datenstruktur?  
-   - Warum sind Datenstrukturen wichtig?  
-2. Definition & Prinzip  
-   - Was ist ein Stack?  
-   - LIFO-Prinzip (Last In – First Out)  
-3. Aufbau & Funktionsweise  
-   - Elemente stapeln  
-   - Zugriff nur auf oberstes Element
+- **Erläuterung der Datenstruktur (Stack)**
+  - Allgemeine Definition  
+  - Aufbau und Funktionsweise  
+- Beispiele und Alltagsvergleiche (z. B. Tellerstapel, Browser-History)  
+- Übergang zu den Operationen  
+
+Redezeit: ca. 6–7 Minuten
+Aufwand: eher theoretisch, leicht zu erarbeiten, wichtig für Verständnis  
 
 ---
 
-### Person B
-4. Grafische Darstellung  
-   - Skizze / Visualisierung von Push & Pop  
-5. Operationen im Detail  
-   - Push (hinzufügen)  
-   - Pop (entfernen)  
-   - Peek (oberstes Element ansehen)  
-6. Vor- und Nachteile  
-   - Vorteile (einfach, effizient)  
-   - Nachteile (nur Zugriff auf Top)  
+### cristian Cubas
+- **Grafische Skizzierung des Aufbaus**
+  - Darstellung der Struktur mit Zeichnungen (Stapel, Push/Pop-Skizze)  
+- **Erläuterung der wichtigsten Operationen**
+  - Push, Pop, Peek/Top  
+  - Grafische Veranschaulichung jeder Operation  
+
+Redezeit: ca. 7 Minuten  
+Aufwand: Grafiken erstellen + Beispiele erklären  
 
 ---
 
-### Person C
-7. Einsatzbereiche  
-   - Undo-Funktion  
-   - Funktionsaufruf-Stack  
-   - Ausdrucksauswertung (z. B. Klammern)  
-8. Implementierung in C  
-   - Einfacher Beispielcode für Push/Pop  
-   - Erklärung des Codes  
-9. Quiz  
-   - 5 Fragen zur Wiederholung  
+### Sven Faas
+- **Vor- und Nachteile**
+  - Stärken (einfach, effizient)  
+  - Schwächen / Limitierungen (nur Zugriff auf oberstes Element)  
+- **Einsatzbereiche**
+  - Beispiele: Undo-Funktion, Call Stack, Klammernprüfung  
+- **Implementierung in C**
+  - Kurzer, kommentierter Beispielcode (Push/Pop)  
+- **Quiz (5 Fragen)**  
+
+Redezeit: ca. 7–8 Minuten  
+Aufwand: Code schreiben & Quiz vorbereiten, etwas technischer  
+
+---
+
+Damit hat jede Person einen klar abgegrenzten Teil, ungefähr gleich viel Redezeit und Vorbereitungsaufwand.
